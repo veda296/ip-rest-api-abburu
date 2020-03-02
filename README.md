@@ -4,6 +4,14 @@ Create a simple IP Address Management REST API using Spring Framework on top of 
  
 The REST API must support four endpoint:
   * **Create IP addresses** - take in a CIDR block (e.g. 10.0.0.1/24) and add all IP addresses within that block to the data store with status “available”
+		Endpoint: `http://localhost:8080/create`
+		Data: `{"cidr" : "x.x.x.x/y"}`
   * **List IP addresses** - return all IP addresses in the system with their current status
+		Endpoint: `http://localhost:8080/list`
   * **Acquire an IP** - set the status of a certain IP to “acquired”
+		Endpoint: `http://localhost:8080/acquire/{ip}`
   * **Release an IP** - set the status of a certain IP to “available”
+		Endpoint: `http://localhost:8080/release/{ip}`
+  
+ 
+
